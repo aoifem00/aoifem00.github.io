@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!--Ensures a 1:1 ratio with the screen-->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!--Added font-->
@@ -12,15 +10,45 @@
   html {
     scroll-behavior: smooth;
   }
-  img {
+  .container{
+    position: relative;
+    width: 100%;
+  }
+  .image {
+    position: relative;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
   body {
     color: black;
     text-align: center;
     font-family: 'Fjalla One';
+    overflow-y: scroll;
     padding: 0;
     margin: 0;
   }
@@ -62,9 +90,13 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#about">About</a></li>
   </ul>
-  <h1>Divest Binghamton University</h1>
+    <h1>Divest Binghamton University</h1>
+    <p>Add Text Here<p>
   <!--Add an image on the home screen-->
-  <img src="images/bg.jpg" width=100% height=100%>
-  <p>Add Text Here<p>
-</body>
+  <div class="container">
+    <img src="images/bg.jpg" width=100% height="100%" class"image">
+    <div class="overlay">
+      <div class="text">Our Mission</div>
+    </div>
+  </div>
 </html>
