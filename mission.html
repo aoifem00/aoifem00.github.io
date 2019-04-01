@@ -9,19 +9,53 @@
     html {
       scroll-behavior: smooth;
     }
-    body {
+    body{
       color: black;
       text-align: center;
       font-family: 'Patua One';
       overflow-y: scroll;
       padding: 0;
       margin: 0;
+      line-height: 1;
     }
     p{
       text-align: left;
+    /*Added navigation bar*/
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      width: 100%;
+      top: 0;
+      position: fixed;
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+    }
+    li {
+      float: left;
+    }
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .active {
+      background-color: black;
     }
   </style>
   <body>
+    <ul>
+      <!--Added a navigagtion bar-->
+      <li><a href="index.html">Home</a></li>
+      <li><a class = "active" href="mission.html">Our Mission</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
     <h1>ABOUT DIVEST BING</h1>
     <p><b>DIVEST BING</b> is a student-coordinated campaign for financial transparency and ethical investment at SUNY Binghamton. We strive to ensure that the financial portfolio of Binghamton University aligns with its expressed core values including engagement, excellence, and global-mindedness.
       <br>

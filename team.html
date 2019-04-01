@@ -7,13 +7,52 @@
   <link href='https://fonts.googleapis.com/css?family=Patua One' rel='stylesheet'>
   <!--Added CSS style-->
   <style>
+  /*Formatted body style*/
     body{
-      font-family: 'Patua One';
+      color: black;
       text-align: center;
+      font-family: 'Patua One';
+      overflow-y: scroll;
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+    }
+    /*Added navigation bar*/
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      width: 100%;
+      top: 0;
+      position: fixed;
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+    }
+    li {
+      float: left;
+    }
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .active {
+      background-color: black;
     }
   </style>
 </head>
 <body>
+  <ul>
+    <!--Added a navigagtion bar-->
+    <li><a href="index.html">Home</a></li>
+    <li><a href="mission.html">Our Mission</a></li>
+    <li><a class = "active" href="team.html">Our Team</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
   <h1>Our Team</h1>
 </body>
 </html>
