@@ -10,15 +10,42 @@
   html {
     scroll-behavior: smooth;
   }
-  img{
-    opacity: 1.0;
+  .container {
+    position: relative;
+    width: 100%;
+  }
+  .image {
+    opacity: 1;
     display: block;
     width: 100%;
-    transition: 0.5s;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
   }
-  img:hover{
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .container:hover .image {
     opacity: 0.5;
-    transition: 0.5s;
+  }
+
+  .container:hover .middle {
+    opacity: 1;
+  }
+
+  .text {
+    color: black;
+    font-size: 40px;
+    padding: 16px 32px;
   }
   body{
     color: black;
@@ -69,7 +96,13 @@
   </ul>
   <h1><b>DIVEST BING</b></h1>
   <p>@SUNY Binghamton</p>
+  <!--Implement container class-->
+  <div class="container">
   <!--Add an image on the home screen-->
-  <img src="images/bing.jpg">
+  <img src="images/bing.jpg" class="image" height="100%" width="100%">
+  <div class="middle">
+    <div class="text">DIVEST BING</div>
+  </div>
+</div>
 </body>
 </html>
